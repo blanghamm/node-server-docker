@@ -1,0 +1,13 @@
+version: "3.7"
+services:
+  nod_dev_env:
+    build:
+      context: .
+      target: development
+    container_name: node-server
+    tty: true
+    ports:
+      - "8080:3000"
+    volumes:
+      - /opt/project/node_modules
+      - .:/opt/project
